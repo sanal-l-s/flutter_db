@@ -66,7 +66,7 @@ class HomePage extends StatelessWidget {
 
               if (name.isNotEmpty && position.isNotEmpty) {
                 await provider._database.insertEmployee(Employee(
-                  id: 1,
+                  // id: 1,
                   name: name,
                   position: position,
                 ));
@@ -88,7 +88,7 @@ class HomePage extends StatelessWidget {
                   trailing: IconButton(
                     icon: Icon(Icons.delete),
                     onPressed: () async {
-                      await provider._database.deleteEmployee(employee.id);
+                      await provider._database.deleteEmployee(employee.id!);
                       provider.refreshEmployees();
                     },
                   ),

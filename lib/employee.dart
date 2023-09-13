@@ -1,9 +1,9 @@
 class Employee {
-  int id;
+  int? id;
   String name;
   String position;
 
-  Employee({required this.id, required this.name, required this.position});
+  Employee({this.id, required this.name, required this.position});
 
   Map<String, dynamic> toMap() {
     return {
